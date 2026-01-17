@@ -13,8 +13,8 @@ contract TraderRegistry {
 
     mapping(address => Trader) public traders;
     mapping(address => mapping(address => bool)) public is_Follower;
-    mapping(address => address[]) public followers;
-    mapping(address => address[]) public following;
+    mapping(address => address[]) public traderFollowers;
+    mapping(address => address[]) public traderfollowing;
 
     function registerTrader() public {
         require(!traders[msg.sender].active, "Already registered");
@@ -36,19 +36,19 @@ contract TraderRegistry {
 
     function followTrader(address _trader) external {
         require(traders[_trader].active, "Trader not active");
-        require(!isFollower[_trader][msg.sender], "Already following");
+        require(!is_Follower[_trader][msg.sender], "Already following");
 
-        isFollower[_trader][msg.sender] = true;
+        is_Follower[_trader][msg.sender] = true;
         traderFollowers[_trader].push(msg.sender);
-        followerTraders[msg.sender].push(_trader);
+        traderfollowing[msg.sender].push(_trader);
 
         emit RegistryEvents.TraderFollowed(_trader, msg.sender);
     }
 
     function unfollowTrader(address _trader) external {
-        require(isFollower[_trader][msg.sender], "Not following trader");
+        require(is_Follower[_trader][msg.sender], "Not following trader");
 
-        isFollower[_trader][msg.sender] = false;
+        is_Follower[_trader][msg.sender] = false;
 
         emit RegistryEvents.TraderUnfollowed(_trader, msg.sender);
     }
