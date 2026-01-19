@@ -2,21 +2,19 @@
 pragma solidity ^0.8.30;
 
 
-// contract Copy_Trade {
+contract Copy_Trade {
     
-//     struct Trade {
-//         uint256 trad_id;
-//         address token_in;
-//         address token_out;
-//         uint256 amount;
-//         uint256 min_out;
-//         uint256 time_stamp;
-//     }
+mapping(address => Trade[]) public influencerTrades;
 
-//     struct copy_trade {
-//         address copy_user;
-//         uint256 trade_id;
-//         uint256 amount;
-//         uint256 time_stamp;
-//     }
-// }
+    /// @notice Trade structure
+    struct Trade {
+        address tokenIn;
+        address tokenOut;
+        uint256 amountIn;
+        uint256 minOut;
+        uint256 timestamp;
+    }
+
+    ///@notice track followtrader last trade
+    mapping(address => Trade) public lastTrade;
+}
