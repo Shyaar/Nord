@@ -31,6 +31,9 @@ export const Navbar = () => {
           </div>
           
           <div className="flex items-center gap-4">
+            <Link href="/login" className="text-sm font-medium text-white hover:text-primary transition-colors hidden sm:block">
+              Log In
+            </Link>
             <Button size="sm" className="hidden sm:inline-flex shadow-[0_0_15px_rgba(255,85,0,0.3)]">
               Get Started
             </Button>

@@ -56,10 +56,6 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.glow-text {
-  text-shadow: 0 0 20px rgba(255, 85, 0, 0.5);
-}
-
 .text-gradient {
   background: linear-gradient(to right, #ffffff, #a1a1aa);
   -webkit-background-clip: text;

@@ -14,7 +14,7 @@ export const Hero = () => {
             </div>
             
           <h1 className="text-6xl font-bold tracking-tight text-white sm:text-8xl mb-6 font-sans">
-            Nord <span className="text-zinc-500">|</span> Trade Smarter, <br />
+            Nord <span className="text-zinc-600">|</span> Trade Smarter, <br />
             <span className="text-gradient-primary">Faster, Safer.</span>
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-zinc-400 mb-10 leading-relaxed">
