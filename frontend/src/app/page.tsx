@@ -10,7 +10,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-white">
+    <main className="min-h-screen bg-[#030303] text-foreground overflow-x-hidden selection:bg-primary selection:text-white">
       <Navbar />
       <Hero />
       <HowItWorks />
@@ -35,7 +35,7 @@ export default function Home() {
             </p>
              <a
                href="#"
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-orange-600 px-10 py-4 text-lg font-bold text-white transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(255,85,0,0.5)] shadow-lg shadow-primary/20"
+                className= "bg-gradient-to-r from-[#FF5500] to-[#FF8000] text-white hover:shadow-[0_0_20px_rgba(255,85,0,0.4)] hover:scale-105 active:scale-95 border border-white/10 p-4"
               >
                 Create Free Account
               </a>

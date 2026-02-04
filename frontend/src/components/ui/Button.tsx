@@ -14,12 +14,12 @@ export const Button = ({
   isLoading = false,
   ...props
 }: ButtonProps) => {
-  const baseStyles = "inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed";
+  const baseStyles = "inline-flex items-center justify-center  font-medium transition-all duration-300 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed";
   
   const variants = {
     primary: "bg-gradient-to-r from-[#FF5500] to-[#FF8000] text-white hover:shadow-[0_0_20px_rgba(255,85,0,0.4)] hover:scale-105 active:scale-95 border border-white/10",
     glow: "bg-white text-black hover:bg-zinc-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]",
-    secondary: "bg-surface hover:bg-white/10 text-white border border-white/10",
+    secondary: "bg-black hover:bg-white/10 text-white border border-white/10",
     outline: "bg-transparent border border-white/20 text-white hover:bg-white/5",
     ghost: "bg-transparent text-zinc-400 hover:text-white hover:bg-white/5",
   };
