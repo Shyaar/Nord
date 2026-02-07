@@ -1,12 +1,12 @@
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { HowItWorks } from "@/components/HowItWorks";
-import { Benefits } from "@/components/Benefits";
-import { TradersShowcase } from "@/components/TradersShowcase";
-import { LearningHub } from "@/components/LearningHub";
-import { Trust } from "@/components/Trust";
-import { Testimonials } from "@/components/Testimonials";
-import { Footer } from "@/components/Footer";
+import { Navbar } from "@/Landing_Page/Navbar";
+import { Hero } from "@/Landing_Page/Hero";
+import { HowItWorks } from "@/Landing_Page/HowItWorks";
+import { Benefits } from "@/Landing_Page/Benefits";
+import { TradersShowcase } from "@/Landing_Page/TradersShowcase";
+import { LearningHub } from "@/Landing_Page/LearningHub";
+import { Trust } from "@/Landing_Page/Trust";
+import { Testimonials } from "@/Landing_Page/Testimonials";
+import { Footer } from "@/Landing_Page/Footer";
 
 export default function Home() {
   return (
