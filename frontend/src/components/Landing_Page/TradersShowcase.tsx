@@ -1,5 +1,5 @@
-import { Button } from './ui/Button';
-import { Card } from './ui/Card';
+import { Button } from "../ui/Button";
+import { Card } from "../ui/Card";
 
 const traders = [
   {
@@ -37,7 +37,7 @@ const traders = [
     risk: "Medium",
     followers: "3.8k",
     avatar: "bg-gradient-to-br from-zinc-700 to-zinc-900",
-  }
+  },
 ];
 
 export const TradersShowcase = () => {
@@ -50,44 +50,72 @@ export const TradersShowcase = () => {
               Top Performing Traders
             </h2>
             <p className="text-zinc-500 text-lg">
-              Choose from thousands of verified experts. Filter by risk, return, and strategy.
+              Choose from thousands of verified experts. Filter by risk, return,
+              and strategy.
             </p>
           </div>
-          <Button variant="outline" className="border-white/10 text-zinc-400 hover:text-white hover:border-white/30">
+          <Button
+            variant="outline"
+            className="border-white/10 text-zinc-400 hover:text-white hover:border-white/30"
+          >
             View All Traders
-            <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg
+              className="ml-2 w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
             </svg>
           </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {traders.map((trader, index) => (
-            <Card key={index} hover className="flex flex-col bg-[#0A0A0A] border-white/5">
+            <Card
+              key={index}
+              hover
+              className="flex flex-col bg-[#0A0A0A] border-white/5"
+            >
               <div className="flex items-center gap-4 mb-6">
-                <div className={`w-12 h-12 rounded-full ${trader.avatar} flex items-center justify-center text-white font-bold text-sm border border-white/10`}>
+                <div
+                  className={`w-12 h-12 rounded-full ${trader.avatar} flex items-center justify-center text-white font-bold text-sm border border-white/10`}
+                >
                   {trader.name.charAt(0)}
                 </div>
                 <div>
                   <h3 className="font-bold text-white">{trader.name}</h3>
                   <div className="flex items-center gap-2">
-                     <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                     <p className="text-xs text-zinc-500">{trader.strategy}</p>
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                    <p className="text-xs text-zinc-500">{trader.strategy}</p>
                   </div>
                 </div>
               </div>
 
               <div className="space-y-4 mb-8 flex-grow">
                 <div className="flex justify-between items-end border-b border-white/5 pb-3">
-                  <span className="text-zinc-500 text-xs font-medium uppercase tracking-wider pl-1">Return (1Y)</span>
-                  <span className="text-primary font-bold text-lg">{trader.roi}</span>
+                  <span className="text-zinc-500 text-xs font-medium uppercase tracking-wider pl-1">
+                    Return (1Y)
+                  </span>
+                  <span className="text-primary font-bold text-lg">
+                    {trader.roi}
+                  </span>
                 </div>
                 <div className="flex justify-between items-center border-b border-white/5 pb-3">
-                  <span className="text-zinc-500 text-xs font-medium uppercase tracking-wider pl-1">Win Rate</span>
+                  <span className="text-zinc-500 text-xs font-medium uppercase tracking-wider pl-1">
+                    Win Rate
+                  </span>
                   <span className="text-white">{trader.winRate}</span>
                 </div>
                 <div className="flex justify-between items-center pb-1">
-                  <span className="text-zinc-500 text-xs font-medium uppercase tracking-wider pl-1">Followers</span>
+                  <span className="text-zinc-500 text-xs font-medium uppercase tracking-wider pl-1">
+                    Followers
+                  </span>
                   <span className="text-white">{trader.followers}</span>
                 </div>
               </div>
